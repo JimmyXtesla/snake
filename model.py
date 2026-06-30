@@ -6,12 +6,10 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-# --- CONFIGURATION ---
 GRID_SIZE = 30
 GRID_COUNT = 14  # 14x14 arena
 WINDOW_SIZE = GRID_SIZE * GRID_COUNT
 
-# Auto-detect local acceleration architecture
 if torch.cuda.is_available():
     DEVICE = torch.device("cuda")
 elif torch.backends.mps.is_available():
@@ -25,7 +23,6 @@ COLOR_HEAD = (52, 152, 219)
 COLOR_BODY = (41, 128, 185)
 COLOR_APPLE = (231, 76, 60)
 COLOR_TEXT = (236, 240, 241)
-
 
 class WorldClassSnakeGame:
     def __init__(self):
