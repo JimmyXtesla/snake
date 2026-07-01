@@ -176,8 +176,6 @@ class WorldClassSnakeGame:
         self.window.blit(txt_stats, (15, 15))
         pygame.display.flip()
 
-
-# --- PRIORITIZED EXPERIENCE REPLAY BUFFER (PER) ---
 class PrioritizedReplayBuffer:
     def __init__(self, capacity=50000, alpha=0.6):
         self.capacity = capacity
